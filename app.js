@@ -142,8 +142,9 @@
     } else if (a.imgLink) {
       links.appendChild(link(a.imgLink, null, "Photo at source \u2197"));
     }
-    var status = el("span", "status-note", STATUS_LABEL[a.imgStatus]);
-    links.appendChild(status);
+    if (!links.querySelector("a")) {
+      links.appendChild(el("span", "status-note", STATUS_LABEL[a.imgStatus]));
+    }
     body.appendChild(links);
 
     card.appendChild(media);
@@ -216,6 +217,15 @@
   function catShown0(catId) {
     return data.filter(function (a) { return a.cat === catId; }).length;
   }
+
+  /* ---------- Sticky offsets ---------- */
+  var hdr = document.querySelector(".site-header");
+  var controlsBar = document.querySelector(".controls-bar");
+  function syncSticky() {
+    controlsBar.style.top = hdr.offsetHeight + "px";
+    document.documentElement.style.scrollPaddingTop = (hdr.offsetHeight + controlsBar.offsetHeight + 12) + "px";
+  }
+  window.addEventListener("resize", syncSticky);
 
   /* ---------- Controls wiring ---------- */
   var searchInput = document.getElementById("search-input");
@@ -337,5 +347,6 @@
   });
 
   /* ---------- Init ---------- */
+  syncSticky();
   applyFilters();
 })();
