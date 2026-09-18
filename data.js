@@ -36,6 +36,8 @@ const PROV = {
   agShipParts: "https://ancient-greece.org/antikythera-shipwreck-2/",
   agHull: "https://ancient-greece.org/antikythera-shipwreck-1/",
   agTiles: "https://ancient-greece.org/antikythera-shipwreck-3/",
+  agUtensils: "https://ancient-greece.org/antikythera-shipwreck-5/",
+  agFragments: "https://ancient-greece.org/antikythera-shipwreck-15/",
   arHeracles: "https://ancientrome.ru/art/artworken/img.htm?id=6139",
   arEphebe: "https://ancientrome.ru/art/artworken/img.htm?id=6145",
   arPhilosopher: "https://ancientrome.ru/art/artworken/img.htm?id=6148",
@@ -141,11 +143,14 @@ const ARTIFACTS = [
     material: "bronze", matDetail: "Bronze (copper alloy)",
     campaign: "1900-01", date: "3rd – 2nd c. BC",
     inv: "NAM X 15093; NAM X 15115",
-    imgKind: null, imgAlt: "", imgStatus: "none",
+    imgKind: "local", imgSrc: "assets/external/bronze-arms-feet.jpg",
+    imgAlt: "Bronze statue fragments: arms above and sandalled feet below, with heavy marine patina", imgStatus: "high-res",
+    imgLink: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-15.jpeg",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
+      { label: "Image source — ancient-greece.org (CC BY-NC-ND 4.0)", url: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-15.jpeg" },
     ],
-    notes: "A left foot from a statue (X 15093, 2nd c. BC ?) and the right foot of a male statue wearing a sandal (X 15115, 225–200 BC) — workshop-cast replacements, illustrating the serial production of bronze statue parts.",
+    notes: "A left foot from a statue (X 15093, 2nd c. BC ?) and the right foot of a male statue wearing a sandal (X 15115, 225–200 BC) — workshop-cast replacements, illustrating the serial production of bronze statue parts. The exhibition photograph also shows arms from bronze statues. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
   },
 
   /* ============ STATUARY — MARBLE ============ */
@@ -248,13 +253,15 @@ const ARTIFACTS = [
     material: "marble", matDetail: "Parian marble",
     campaign: "1900-01", date: "Early 1st c. BC",
     inv: "NAM 2773",
-    imgKind: null, imgAlt: "", imgStatus: "photo at source",
-    imgLink: PROV.agBoy,
+    imgKind: "local", imgSrc: "assets/external/marble-athlete.jpg",
+    imgAlt: "Marble statue of a young athlete, well preserved on the buried right side and heavily sea-eroded on the left", imgStatus: "high-res",
+    imgLink: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-19.jpeg",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
       { label: "2013 NAM exhibition photographs (ancient-greece.org)", url: PROV.agBoy },
+      { label: "Image source — ancient-greece.org (CC BY-NC-ND 4.0)", url: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-19.jpeg" },
     ],
-    notes: "Also used for a section-heading photograph in the museum’s own 2012 booklet — a favourite of the exhibition designers.",
+    notes: "Also used for a section-heading photograph in the museum’s own 2012 booklet — a favourite of the exhibition designers. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
   },
   {
     id: "horse", cat: "statuary", group: "Marble statuary",
@@ -334,13 +341,15 @@ const ARTIFACTS = [
     material: "gold", matDetail: "Gold, pearls, garnet, emeralds or prase",
     campaign: "1900-01", date: "2nd half 2nd – early 1st c. BC",
     inv: "NAM Xρ. 1579 & 1579α",
-    imgKind: null, imgAlt: "", imgStatus: "photo at source",
-    imgLink: PROV.agJewellery,
+    imgKind: "local", imgSrc: "assets/external/gold-jewellery.jpg",
+    imgAlt: "Gold earrings with Eros pendants, gold rings and other personal items displayed together", imgStatus: "high-res",
+    imgLink: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-7.jpeg",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
       { label: "2013 NAM exhibition photographs (ancient-greece.org)", url: PROV.agJewellery },
+      { label: "Image source — ancient-greece.org (CC BY-NC-ND 4.0)", url: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-7.jpeg" },
     ],
-    notes: "From a small group of gold jewellery in the cargo: three earrings with pendant cupids in all, a ring, and two settings with inlaid stones. A 2010 study (M. C. Jackson, BCH 134) re-examined this group.",
+    notes: "From a small group of gold jewellery in the cargo: three earrings with pendant cupids in all, a ring, and two settings with inlaid stones. A 2010 study (M. C. Jackson, BCH 134) re-examined this group. The exhibition photograph is a group shot showing several jewellery and personal items together. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
   },
   {
     id: "earring-1646", cat: "jewellery", group: "Gold jewellery",
@@ -630,13 +639,15 @@ const ARTIFACTS = [
     material: "ceramic", matDetail: "Terracotta (Megarian bowls, cooking pots, plates)",
     campaign: "1900-01", date: "1st c. BC",
     inv: "Relief bowls with inscribed rims: NAM 30708, 30709; krater: NAM 31005; jug: NAM 30967",
-    imgKind: null, imgAlt: "", imgStatus: "photo at source",
-    imgLink: PROV.agPottery,
+    imgKind: "local", imgSrc: "assets/external/relief-bowl-sherds.jpg",
+    imgAlt: "Moulded relief bowl sherds with an inscribed rim and stamped rosette decoration", imgStatus: "high-res",
+    imgLink: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-6.jpeg",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
       { label: "2013 NAM exhibition photographs (ancient-greece.org)", url: PROV.agPottery },
+      { label: "Image source — ancient-greece.org (CC BY-NC-ND 4.0)", url: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-6.jpeg" },
     ],
-    notes: "Megarian (relief) bowls carry inscriptions naming their owners; cooking pots with traces of burning and plain plates point to food preparation aboard during the voyage.",
+    notes: "Megarian (relief) bowls carry inscriptions naming their owners; cooking pots with traces of burning and plain plates point to food preparation aboard during the voyage. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
   },
   {
     id: "lamps", cat: "cargo", group: "Ceramics",
@@ -672,11 +683,14 @@ const ARTIFACTS = [
     material: "stone", matDetail: "Stone (pair of millstones)",
     campaign: "1900-01", date: "Early 1st c. BC",
     inv: "NAM 15556, 15563",
-    imgKind: null, imgAlt: "", imgStatus: "none",
+    imgKind: "local", imgSrc: "assets/external/quern-mortarium.jpg",
+    imgAlt: "Rotary quern hand-mill and stone mortar displayed with ceramic vessels", imgStatus: "high-res",
+    imgLink: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-5.jpeg",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
+      { label: "Image source — ancient-greece.org (CC BY-NC-ND 4.0)", url: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-5.jpeg" },
     ],
-    notes: "A manually operated quern for grinding grain — with the cooking pots, evidence that food was prepared on board.",
+    notes: "A manually operated quern for grinding grain — with the cooking pots, evidence that food was prepared on board. The exhibition photograph also shows the mortarium and ceramic vessels. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
   },
   {
     id: "grindstone-mortarium", cat: "cargo", group: "Stone utensils",
@@ -712,13 +726,15 @@ const ARTIFACTS = [
     material: "bronze", matDetail: "Bronze with dotted floral decoration",
     campaign: "1900-01", date: "Late 2nd – early 1st c. BC",
     inv: "NAM X 18939α–γ (rim and handle fittings; further fittings X 18940γ)",
-    imgKind: null, imgAlt: "", imgStatus: "photo at source",
-    imgLink: PROV.agBronzeVessels,
+    imgKind: "local", imgSrc: "assets/external/bronze-vessel-parts.jpg",
+    imgAlt: "Corroded bronze and tin vessels and fittings: a jug, miniature oinochoai, handles and mounts", imgStatus: "high-res",
+    imgLink: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-8.jpeg",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
       { label: "2013 NAM exhibition photographs (ancient-greece.org)", url: PROV.agBronzeVessels },
+      { label: "Image source — ancient-greece.org (CC BY-NC-ND 4.0)", url: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-8.jpeg" },
     ],
-    notes: "The rim’s dotted floral decoration points to Campanian workshops; a rectangular frame is probably a manufacturer’s stamp.",
+    notes: "The rim’s dotted floral decoration points to Campanian workshops; a rectangular frame is probably a manufacturer’s stamp. The exhibition photograph is a group shot of bronze and tin vessel parts, including miniature tin vessels. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
   },
   {
     id: "tin-vessels", cat: "cargo", group: "Metal vessels",
@@ -808,13 +824,15 @@ const ARTIFACTS = [
     material: "lead", matDetail: "Lead",
     campaign: "1900-01", date: "First half 1st c. BC",
     inv: "NAM X 19012, X 19013",
-    imgKind: null, imgAlt: "", imgStatus: "photo at source",
-    imgLink: PROV.agShipParts,
+    imgKind: "local", imgSrc: "assets/external/sounding-weights.jpg",
+    imgAlt: "Two bell-shaped lead sounding weights with lead pipe, rigging rings and lead weights", imgStatus: "high-res",
+    imgLink: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-2.jpeg",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
       { label: "2013 NAM exhibition photographs (ancient-greece.org)", url: PROV.agShipParts },
+      { label: "Image source — ancient-greece.org (CC BY-NC-ND 4.0)", url: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-2.jpeg" },
     ],
-    notes: "Leads used to sound the depth of the sea (katapeirateriai); the two weights suggest both sounding and possibly anchoring functions.",
+    notes: "Leads used to sound the depth of the sea (katapeirateriai); the two weights suggest both sounding and possibly anchoring functions. The exhibition photograph also shows the lead scupper pipe, bronze rings and lead weights. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
   },
   {
     id: "lead-weights", cat: "cargo", group: "Ship’s equipment",
@@ -848,13 +866,15 @@ const ARTIFACTS = [
     material: "ceramic", matDetail: "Terracotta (flat and cover tiles)",
     campaign: "1900-01", date: "First half 1st c. BC",
     inv: "NAM 30878, 30889",
-    imgKind: null, imgAlt: "", imgStatus: "photo at source",
-    imgLink: PROV.agTiles,
+    imgKind: "local", imgSrc: "assets/external/roof-tiles.jpg",
+    imgAlt: "Corinthian pan and cover roof tiles from the ship's sheltered deck structure", imgStatus: "high-res",
+    imgLink: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-3.jpeg",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
       { label: "2013 NAM exhibition photographs (ancient-greece.org)", url: PROV.agTiles },
+      { label: "Image source — ancient-greece.org (CC BY-NC-ND 4.0)", url: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-3.jpeg" },
     ],
-    notes: "The tiles roofed a sheltered living area of the ship.",
+    notes: "The tiles roofed a sheltered living area of the ship. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
   },
   {
     id: "klinai", cat: "cargo", group: "Ship’s equipment",
@@ -874,13 +894,15 @@ const ARTIFACTS = [
     material: "wood", matDetail: "Wood (with lead sheeting traces)",
     campaign: "1900-01", date: "220 BC (± 43)",
     inv: "Ephorate of Underwater Antiquities ΒΕ 2011/11",
-    imgKind: null, imgAlt: "", imgStatus: "photo at source",
-    imgLink: PROV.agHull,
+    imgKind: "local", imgSrc: "assets/external/hull-plank.jpg",
+    imgAlt: "Preserved wooden hull timber with lead sheeting and bronze spikes, 220 BC (± 43)", imgStatus: "high-res",
+    imgLink: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-1.jpeg",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
       { label: "2013 NAM exhibition photographs (ancient-greece.org)", url: PROV.agHull },
+      { label: "Image source — ancient-greece.org (CC BY-NC-ND 4.0)", url: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-1.jpeg" },
     ],
-    notes: "Held by the Ephorate of Underwater Antiquities under its own inventory series (ΒΕ), separate from the NAM catalogue.",
+    notes: "Held by the Ephorate of Underwater Antiquities under its own inventory series (ΒΕ), separate from the NAM catalogue. The exhibition photograph also shows lead sheathing sheets and bronze spikes. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
   },
 
   /* ============ 1976 EXPEDITION ============ */
