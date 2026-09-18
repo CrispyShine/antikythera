@@ -48,6 +48,9 @@ Youth of Antikythera), the discrepancy is noted on the entry.
   reproduced here at reduced resolution for documentation purposes. If you
   republish this repository, review these images against your own reuse
   requirements and the project's terms.
+- The bronze statuette of a youth (NAM X 18957) photograph is from
+  **ancient-greece.org**, used under
+  [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 ## Structure
 

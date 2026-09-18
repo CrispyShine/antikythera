@@ -321,7 +321,7 @@
     if (a.imgKind === "commons") {
       ml.appendChild(link(commonsPage(a.imgFile), null, "High-resolution image (Wikimedia Commons) \u2197"));
     } else if (a.imgLink && a.imgStatus === "high-res") {
-      ml.appendChild(link(a.imgLink, null, "High-resolution image (official project photo) \u2197"));
+      ml.appendChild(link(a.imgLink, null, "High-resolution image (source) \u2197"));
     } else if (a.imgLink) {
       ml.appendChild(link(a.imgLink, null, "Photograph at source page \u2197"));
     }
