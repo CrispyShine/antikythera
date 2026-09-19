@@ -54,6 +54,11 @@ Youth of Antikythera), the discrepancy is noted on the entry.
   roof tiles) are used under
   [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/), with
   attribution recorded in each entry's provenance links and notes.
+- The card image for the gold earrings with Eros pendants (NAM Xρ. 1579 &
+  1579α) is an **AI-generated illustration** based on photographs of the
+  surviving earrings; it is labelled as such on the card and in the entry
+  notes, and decorative details may differ from the artefacts. The entry links
+  to a photograph of the actual finds.
 
 ## Structure
 

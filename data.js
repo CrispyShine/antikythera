@@ -341,15 +341,15 @@ const ARTIFACTS = [
     material: "gold", matDetail: "Gold, pearls, garnet, emeralds or prase",
     campaign: "1900-01", date: "2nd half 2nd – early 1st c. BC",
     inv: "NAM Xρ. 1579 & 1579α",
-    imgKind: "local", imgSrc: "assets/external/gold-jewellery.jpg",
-    imgAlt: "Gold earrings with Eros pendants, gold rings and other personal items displayed together", imgStatus: "high-res",
+    imgKind: "local", imgSrc: "assets/illustrations/eros-earrings.jpg",
+    imgAlt: "AI-generated illustration of a pair of Hellenistic gold earrings with Eros pendants, gem-set and pearl decoration, on a dark background", imgStatus: "illustration",
     imgLink: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-7.jpeg",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
       { label: "2013 NAM exhibition photographs (ancient-greece.org)", url: PROV.agJewellery },
       { label: "Image source — ancient-greece.org (CC BY-NC-ND 4.0)", url: "https://ancient-greece.org/wp-content/uploads/Antikythera-Shipwreck-7.jpeg" },
     ],
-    notes: "From a small group of gold jewellery in the cargo: three earrings with pendant cupids in all, a ring, and two settings with inlaid stones. A 2010 study (M. C. Jackson, BCH 134) re-examined this group. The exhibition photograph is a group shot showing several jewellery and personal items together. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
+    notes: "From a small group of gold jewellery in the cargo: three earrings with pendant cupids in all, a ring, and two settings with inlaid stones. A 2010 study (M. C. Jackson, BCH 134) re-examined this group. Card image: AI-generated illustration based on photographs of the surviving earrings — decorative details may differ from the artefacts. Photograph of the actual finds at the linked source. Photograph: ancient-greece.org, CC BY-NC-ND 4.0."
   },
   {
     id: "earring-1646", cat: "jewellery", group: "Gold jewellery",

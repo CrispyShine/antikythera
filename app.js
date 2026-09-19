@@ -35,6 +35,7 @@
     "high-res": "high-res image",
     "moderate": "image (moderate res)",
     "photo at source": "photo at source page",
+    illustration: "AI-generated illustration",
     none: "no image located"
   };
   function el(tag, cls, text) {
@@ -104,6 +105,9 @@
     var media = el("div", "card-media");
     var camp = el("span", "card-campaign", CAMPAIGN_LABELS[a.campaign]);
     media.appendChild(camp);
+    if (a.imgStatus === "illustration") {
+      media.appendChild(el("span", "card-ai", "AI-generated illustration"));
+    }
 
     var hasImg = a.imgKind === "commons" || a.imgKind === "local" || a.imgKind === "external";
     if (hasImg) {
