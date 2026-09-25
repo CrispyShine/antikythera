@@ -125,7 +125,9 @@
     var camp = el("span", "card-campaign", CAMPAIGN_LABELS[a.campaign]);
     media.appendChild(camp);
     if (a.imgStatus === "illustration") {
-      media.appendChild(el("span", "card-ai", "AI-generated illustration"));
+      var aiMark = el("span", "card-ai", "AI");
+      aiMark.setAttribute("aria-label", "AI-generated illustration");
+      media.appendChild(aiMark);
     }
 
     var hasImg = a.imgKind === "commons" || a.imgKind === "local" || a.imgKind === "external";
@@ -306,15 +308,20 @@
     grid.innerHTML = "";
 
     var mediaBox = el("div", "modal-media");
+    var mediaFrame = el("div", "modal-media-frame");
     var hasImg = a.imgKind === "commons" || a.imgKind === "local" || a.imgKind === "external";
     if (hasImg) {
       var img = el("img");
       img.alt = a.imgAlt || a.name;
       if (a.imgKind === "commons") { img.src = commonsThumb(a.imgFile, 1024); }
       else { img.src = a.imgSrc; }
-      mediaBox.appendChild(img);
+      mediaFrame.appendChild(img);
     } else {
-      mediaBox.appendChild(placeholderFor(a));
+      mediaFrame.appendChild(placeholderFor(a));
+    }
+    mediaBox.appendChild(mediaFrame);
+    if (a.imgStatus === "illustration") {
+      mediaBox.appendChild(el("div", "modal-ai-caption", "AI-generated"));
     }
 
     var body = el("div", "modal-body");
