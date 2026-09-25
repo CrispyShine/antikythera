@@ -9,7 +9,7 @@ html {
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   hanging-punctuation: first last;
-  scroll-padding-top: var(--space-16);
+  scroll-padding-top: var(--sticky-offset-header, var(--space-16));
 }
 
 body {

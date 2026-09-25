@@ -18,6 +18,25 @@
     });
   }
 
+  /* ---------- Sticky offset (header + controls bar) for anchor scrolling ---------- */
+  (function () {
+    var header = document.querySelector(".site-header");
+    var controls = document.querySelector(".controls-bar");
+    function updateStickyOffset() {
+      var headerH = header ? header.offsetHeight : 0;
+      var controlsH = controls ? controls.offsetHeight : 0;
+      rootEl.style.setProperty("--sticky-offset-header", (headerH + 8) + "px");
+      rootEl.style.setProperty("--sticky-offset", (headerH + controlsH + 8) + "px");
+    }
+    updateStickyOffset();
+    window.addEventListener("load", updateStickyOffset);
+    var resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(updateStickyOffset, 150);
+    });
+  })();
+
   /* ---------- Helpers ---------- */
   function norm(s) {
     return (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");

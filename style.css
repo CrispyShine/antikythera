@@ -120,6 +120,18 @@
   padding: var(--space-3) var(--space-4);
   display: flex; align-items: center; gap: var(--space-4);
 }
+.back-link {
+  display: flex; align-items: center;
+  font-size: var(--text-xs); font-weight: 500;
+  color: var(--color-text-faint); text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  border-right: 1px solid var(--color-divider);
+  margin-right: var(--space-1);
+  white-space: nowrap;
+}
+.back-link:hover { color: var(--color-bronze); }
+@media (max-width: 560px) { .back-link { display: none; } }
+
 .brand { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: inherit; }
 .brand svg { color: var(--color-bronze); flex-shrink: 0; }
 .brand .t1 {
@@ -305,7 +317,7 @@
 
 /* ============ Gallery ============ */
 .gallery-root { max-width: var(--content-wide); margin-inline: auto; padding: var(--space-8) var(--space-4) var(--space-16); }
-.cat-section { margin-bottom: var(--space-16); scroll-margin-top: 8px; }
+.cat-section { margin-bottom: var(--space-16); scroll-margin-top: var(--sticky-offset, 240px); }
 .cat-section > header { margin-bottom: var(--space-6); }
 .cat-section .cat-eyebrow {
   font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase;
@@ -330,7 +342,7 @@
   padding-bottom: var(--space-2);
   border-bottom: 1px solid var(--color-divider);
   display: flex; align-items: baseline; gap: var(--space-3);
-  scroll-margin-top: 8px;
+  scroll-margin-top: var(--sticky-offset, 240px);
 }
 .group-header .g-count { font-family: var(--font-body); font-size: var(--text-xs); color: var(--color-text-faint); font-variant-numeric: tabular-nums; }
 
