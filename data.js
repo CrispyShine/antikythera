@@ -24,6 +24,7 @@ const PROV = {
   wikiMechanism: "https://en.wikipedia.org/wiki/Antikythera_mechanism",
   wikiHeracles: "https://en.wikipedia.org/wiki/Heracles_of_Antikythera",
   cambridge2025: "https://www.cambridge.org/core/blog/2025/10/08/the-statues-from-the-antikythera-shipwreck-125-years-later/",
+  martens2025: "https://www.cambridge.org/core/journals/annual-of-the-british-school-at-athens/article/gymnasion-assemblage-lost-at-sea-the-statues-from-the-antikythera-shipwreck-reconsidered/B9C19CBB7626F931B26FA93A480BD7EE",
   sissaOverview: "https://pos.sissa.it/170/006/pdf",
   agEphebe: "https://ancient-greece.org/antikythera-shipwreck-12/",
   agPhilosopher: "https://ancient-greece.org/antikythera-shipwreck-14/",
@@ -58,6 +59,7 @@ const ARTIFACTS = [
       { label: "ODYSSEUS (Hellenic Ministry of Culture) record", url: PROV.odysseusEphebe },
       { label: "NAM exhibition “The Antikythera Shipwreck”", url: PROV.namExhibition },
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
+      { label: "Martens (2025), BSA 120 — gymnasion assemblage reassessment", url: PROV.martens2025 },
     ],
     notes: "Perhaps the most celebrated find: a life-size bronze youth, restored in 1953. The museum label suggests Perseus (with Medusa’s head) or Paris (with the apple of Strife), attributed speculatively to the Sikyonian sculptor Euphranor. Some Wikimedia Commons files carry a later dating of 70–60 BC; the museum dates it around 340–330 BC. Displayed in Room 28 (Vases and Minor Arts).",
   },
@@ -74,6 +76,7 @@ const ARTIFACTS = [
       { label: "ODYSSEUS (Hellenic Ministry of Culture) record", url: PROV.odysseusPhilosopher },
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
       { label: "NAM Hellenistic collection", url: PROV.namHellenistic },
+      { label: "Martens (2025), BSA 120 — gymnasion assemblage reassessment", url: PROV.martens2025 },
     ],
     notes: "Portrait head and associated fragments (hands, sandalled feet, himation fragments) of a life-size bronze of a Cynic philosopher, tentatively identified as Bion of Borysthenes or Philitas of Cos. Recovered 1900–01; displayed in Room 30 (Bronzes).",
   },
@@ -166,6 +169,7 @@ const ARTIFACTS = [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
       { label: "Wikipedia — Heracles of Antikythera", url: PROV.wikiHeracles },
       { label: "Gallery of Ancient Art photograph (ancientrome.ru)", url: PROV.arHeracles },
+      { label: "Martens (2025), BSA 120 — gymnasion assemblage reassessment", url: PROV.martens2025 },
     ],
     notes: "Over-life-size marble Heracles, a late Hellenistic copy of the type created by Lysippos of Sikyon. The body was recovered in 1901; a hand was found in 2016, and the head — crowned with a wreath of vine leaves — was recovered in the 2022 season (later campaigns, beyond the 2012–14 scope of this report).",
   },
@@ -217,6 +221,7 @@ const ARTIFACTS = [
     imgKind: null, imgAlt: "", imgStatus: "none",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
+      { label: "Martens (2025), BSA 120 — gymnasion assemblage reassessment", url: PROV.martens2025 },
     ],
     notes: "Head from a statue of Hermes copying a Late Classical prototype. No open-licence photograph was located.",
   },
@@ -229,6 +234,7 @@ const ARTIFACTS = [
     imgKind: null, imgAlt: "", imgStatus: "none",
     prov: [
       { label: "NAM exhibition booklet (2012)", url: PROV.booklet },
+      { label: "Martens (2025), BSA 120 — gymnasion assemblage reassessment", url: PROV.martens2025 },
     ],
     notes: "Cult-image type of Apollo holding a tripod, listed in the 2012 exhibition catalogue. No open-licence photograph was located.",
   },
@@ -1068,7 +1074,7 @@ const ARTIFACTS = [
 ];
 
 const CATEGORIES = [
-  { id: "statuary", label: "Statuary", blurb: "Bronze and marble sculpture recovered from the wreck — from the life-size Youth and the Cynic Philosopher to monumental marbles of Zeus and Heracles. More than thirty-six marble statues and numerous bronze fragments were raised in 1900–01; a 2025 study suggests the assemblage may derive from a single gymnasion." },
+  { id: "statuary", label: "Statuary", blurb: "Bronze and marble sculpture recovered from the wreck — from the life-size Youth and the Cynic Philosopher to monumental marbles of Zeus and Heracles. More than thirty-six marble statues and numerous bronze fragments were raised in 1900–01. A 2025 study by Brian Martens (BSA 120) reinterprets the group as a single gymnasion's statuary — athletes, teachers and protective gods in Parian marble — probably stripped from a Cycladic site such as Delos and carried off as plunder rather than bought for a Roman villa." },
   { id: "mechanism", label: "The Mechanism", blurb: "The Antikythera Mechanism (NAM X 15087): 82 surviving fragments of the world’s oldest known astronomical calculator, built in the second half of the 2nd century BC. Fragments A–D came up in 1901; E in 1976; F was identified in museum storage in 2005; G was separated from C during cleaning." },
   { id: "jewellery", label: "Jewellery & precious metals", blurb: "A small but exquisite group: gold earrings with Eros pendants, a man’s gold ring, inlaid settings, and silver table vessels — the personal luxury goods in the cargo." },
   { id: "cargo", label: "Cargo & ship’s equipment", blurb: "The commercial cargo and the ship itself: glass bowls, ceramics, stone utensils, bronze and tin vessels, coins, couch fittings, hull timbers, anchors and rigging — spanning the 1900–01 salvage, the 1976 Cousteau expedition and the Return to Antikythera seasons from 2012." },
