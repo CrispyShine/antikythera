@@ -143,7 +143,7 @@
 .brand .t2 {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
-  letter-spacing: 0.08em; text-transform: uppercase;
+  letter-spacing: 0.02em;
   display: block;
 }
 .site-nav { margin-left: auto; display: flex; gap: var(--space-1); align-items: center; }
@@ -162,7 +162,7 @@
 @media (max-width: 680px) {
   .site-nav a { display: none; }
   .brand .t1 { font-size: var(--text-sm); }
-  .brand .t2 { font-size: 0.625rem; }
+  .brand .t2 { font-size: 0.6875rem; }
   .brand svg { width: 28px; height: 28px; }
 }
 
@@ -184,7 +184,7 @@
 }
 @media (min-width: 900px) { .hero { grid-template-columns: 7fr 5fr; align-items: center; } }
 .hero .kicker {
-  font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: var(--text-xs); letter-spacing: 0.03em;
   color: var(--color-bronze); font-weight: 600; margin-bottom: var(--space-4);
 }
 .hero h1 {
@@ -294,12 +294,70 @@
   font-size: var(--text-sm); padding: var(--space-1) 0;
 }
 .result-count { font-size: var(--text-xs); color: var(--color-text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
-.filter-rows { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
-.filter-group { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+
+.filters-toggle {
+  display: inline-flex; align-items: center; gap: var(--space-2); flex-shrink: 0;
+  font-size: var(--text-xs); font-weight: 600;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+}
+.filters-toggle:hover { border-color: var(--color-primary); color: var(--color-text); }
+.filters-toggle[aria-expanded="true"] {
+  background: var(--color-primary-highlight); border-color: var(--color-primary); color: var(--color-text);
+}
+.filter-count {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; padding: 0 var(--space-1);
+  border-radius: var(--radius-full);
+  background: var(--color-primary); color: var(--color-surface-2);
+  font-size: 0.6875rem; font-weight: 700; font-variant-numeric: tabular-nums;
+}
+
+.filter-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows var(--transition-interactive);
+}
+.filter-panel.is-open { grid-template-rows: 1fr; }
+
+.filter-rows { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); align-items: flex-start; padding-top: var(--space-2); overflow: hidden; }
+.filter-group { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; flex: 1 1 auto; }
 .filter-group .fg-label {
   font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.08em;
-  color: var(--color-text-faint); margin-right: var(--space-1);
+  color: var(--color-text-faint);
 }
+.chip-scroll {
+  display: flex; flex-wrap: nowrap; gap: var(--space-2);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity; scroll-padding-inline: var(--space-1);
+  padding-block: var(--space-1); margin-inline: calc(var(--space-1) * -1);
+  padding-inline: var(--space-1);
+  mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+.chip-scroll::-webkit-scrollbar { height: 5px; }
+.chip-scroll::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: var(--radius-full); }
+.chip-scroll::-webkit-scrollbar-track { background: transparent; }
+.chip-scroll .chip { flex-shrink: 0; scroll-snap-align: start; }
+
+@media (min-width: 1024px) {
+  .filters-toggle { display: none; }
+  .filter-panel { display: block; overflow: visible; }
+  .filter-rows { overflow: visible; }
+  .filter-group { flex-direction: row; align-items: center; }
+  .filter-group .fg-label { margin-right: var(--space-1); }
+  .chip-scroll {
+    flex-wrap: wrap; overflow-x: visible; scroll-snap-type: none;
+    mask-image: none; -webkit-mask-image: none;
+    margin-inline: 0; padding-inline: 0;
+  }
+}
+
 .chip {
   font-size: var(--text-xs);
   padding: var(--space-2) var(--space-3);
@@ -434,7 +492,7 @@
 /* ============ Modal ============ */
 dialog.modal {
   margin: auto;
-  border: 1px solid var(--color-divider);
+  border: none;
   border-radius: var(--radius-xl);
   background: var(--color-surface);
   color: var(--color-text);

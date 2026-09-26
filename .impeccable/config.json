@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-26T11:04:19.949Z",
+        "reason": "Verified via live computed styles: .timeline-section and .prose-section both resolve clamp() padding to 64-65px top/bottom (checked getComputedStyle + child boundingClientRect in Chrome); detector can't statically resolve the clamp() shorthand and misreads it as near-zero"
+      }
+    ]
+  }
+}

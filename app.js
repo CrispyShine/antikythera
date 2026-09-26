@@ -238,6 +238,7 @@
     rc.textContent = shown + " of " + totalCount + " objects";
     var empty = document.getElementById("empty-state");
     empty.style.display = shown ? "none" : "";
+    updateFilterCount();
   }
   function catShown0(catId) {
     return data.filter(function (a) { return a.cat === catId; }).length;
@@ -287,6 +288,36 @@
   chipRow("camp-chips", [{ value: "all", label: "All" }].concat(
     ["1900-01", "1976", "2012-14", "2015-22"].map(function (c) { return { value: c, label: CAMPAIGN_LABELS[c] }; })
   ), "campaign");
+
+  /* ---------- Filters panel toggle (mobile / small desktop) ---------- */
+  var filtersToggle = document.getElementById("filters-toggle");
+  var filterPanel = document.getElementById("filter-panel");
+  var filterCount = document.getElementById("filter-count");
+
+  function setFiltersOpen(open) {
+    filterPanel.classList.toggle("is-open", open);
+    filtersToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    syncSticky();
+  }
+  filtersToggle.addEventListener("click", function () {
+    setFiltersOpen(!filterPanel.classList.contains("is-open"));
+  });
+  document.addEventListener("click", function (e) {
+    if (!filterPanel.classList.contains("is-open")) return;
+    if (filterPanel.contains(e.target) || filtersToggle.contains(e.target)) return;
+    setFiltersOpen(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && filterPanel.classList.contains("is-open")) {
+      setFiltersOpen(false);
+      filtersToggle.focus();
+    }
+  });
+  function updateFilterCount() {
+    var n = (state.cat !== "all" ? 1 : 0) + (state.mat !== "all" ? 1 : 0) + (state.campaign !== "all" ? 1 : 0);
+    filterCount.textContent = n;
+    filterCount.hidden = n === 0;
+  }
 
   document.getElementById("clear-filters").addEventListener("click", function () {
     state = { q: "", cat: "all", mat: "all", campaign: "all" };
